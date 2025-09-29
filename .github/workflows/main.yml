@@ -1,0 +1,46 @@
+name: "🎭 Deploy Caio Martins - Site Oficial"
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch: {}
+
+jobs:
+  web-deploy:
+    name: "Deploy do Site Caio Martins"
+    runs-on: ubuntu-latest
+    concurrency:
+      group: deploy-caiomartins
+      cancel-in-progress: true
+
+    steps:
+      - name: "🧾 Baixando código mais recente"
+        uses: actions/checkout@v4
+
+      - name: "📂 Enviando arquivos para o servidor (FTPS)"
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          # IMPORTANTE: caminho relativo à raiz FTP do usuário
+          server-dir: /caiomartinsomagico.com/
+          timeout: 1200000
+          dangerous-clean-slate: true
+          security: strict
+          log-level: verbose
+          exclude: |
+            **/.git/**
+            **/.github/**
+            **/node_modules/**
+            **/tests/**
+            **/.DS_Store
+            **/CaioMartins.zip
+            **/README.md
+            **/.vscode/**
+            **/.idea/**
+            **/logs/**
+            **/vendor/composer/**
+            **/vendor/autoload.php
