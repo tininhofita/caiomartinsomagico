@@ -54,13 +54,13 @@ class ContatoAdminController
             $mail->isSMTP();
             $mail->Host = 'smtp.titan.email'; // Ajuste conforme seu servidor
             $mail->SMTPAuth = true;
-            $mail->Username = 'tininho@caiomartinsomagico.com';
-            $mail->Password = 'Tino7227!'; // Substitua pela senha correta
+            $mail->Username = 'agenda@caiomartinsomagico.com';
+            $mail->Password = 'C4ioM4rt1ns@7718';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Método de segurança
             $mail->Port = 465;
 
             // Configuração do remetente e destinatário
-            $mail->setFrom('tininho@caiomartinsomagico.com', 'Caio Martins');
+            $mail->setFrom('agenda@caiomartinsomagico.com', 'Caio Martins');
             $mail->addReplyTo('contato@caiomartinsomagico.com', 'Caio Martins'); // Define o email para resposta
             $mail->addAddress($email);
 

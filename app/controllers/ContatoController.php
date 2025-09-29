@@ -106,15 +106,15 @@ class ContatoController
             $mail->isSMTP();
             $mail->Host = 'smtp.titan.email';
             $mail->SMTPAuth = true;
-            $mail->Username = 'tininho@caiomartinsomagico.com';
-            $mail->Password = 'Tino7227!';
+            $mail->Username = 'agenda@caiomartinsomagico.com';
+            $mail->Password = 'C4ioM4rt1ns@7718';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port = 465;
 
             $mail->CharSet = 'UTF-8';
 
-            $mail->setFrom('tininho@caiomartinsomagico.com', 'Caio Martins');
-            $mail->addAddress('tininho@caiomartinsomagico.com');
+            $mail->setFrom('agenda@caiomartinsomagico.com', 'Caio Martins');
+            $mail->addAddress('agenda@caiomartinsomagico.com');
 
             $mail->isHTML(true);
             $mail->Subject = "Novo contato: $assunto";

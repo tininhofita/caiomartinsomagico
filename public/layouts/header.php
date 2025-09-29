@@ -26,7 +26,7 @@
                         <a class="nav-link" href="/contato">Contato</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://magicocaiom.kpages.online/magicas-para-churrasco-com-caio-martins-065f873f-c331-4646-8b7f-648eed4866af" target="_blank">Contato</a>
+                        <a class="nav-link" href="https://magicocaiom.kpages.online/magicas-para-churrasco-com-caio-martins-065f873f-c331-4646-8b7f-648eed4866af" target="_blank">Curso de Mágicas</a>
                     </li>
                 </ul>
             </div>

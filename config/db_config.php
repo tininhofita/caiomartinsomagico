@@ -1,10 +1,22 @@
 <?php
 function getDatabaseConnection()
 {
-    $host = 'localhost:3306'; // Endereço do servidor de banco de dados
-    $username = 'root';  // Usuário do banco de dados
-    $password = ''; // Senha do banco de dados
-    $dbname = 'caiomartins'; // Nome do banco de dados
+    // Detecta se está em ambiente local ou produção
+    $isLocal = ($_SERVER['HTTP_HOST'] === 'localhost' || $_SERVER['HTTP_HOST'] === 'caiomartins.test' || strpos($_SERVER['HTTP_HOST'], '127.0.0.1') !== false);
+
+    if ($isLocal) {
+        // Configuração para ambiente local
+        $host = 'localhost:3306';
+        $username = 'root';
+        $password = '';
+        $dbname = 'caiomartins';
+    } else {
+        // Configuração para ambiente de produção
+        $host = 'localhost:3306';
+        $username = 'tininh93_tininhofita';
+        $password = 'Tino7227!';
+        $dbname = 'tininh93_caiomartins';
+    }
 
     $mysqli = new mysqli($host, $username, $password, $dbname);
 
@@ -14,18 +26,3 @@ function getDatabaseConnection()
 
     return $mysqli;
 }
-
-// function getDatabaseConnection() {
-//     $host = 'localhost:3306'; // Endereço do servidor de banco de dados
-//     $username = 'tininh93_tininhofita';  // Usuário do banco de dados
-//     $password = 'Tino7227!'; // Senha do banco de dados
-//     $dbname = 'tininh93_caiomartins'; // Nome do banco de dados
-
-//     $mysqli = new mysqli($host, $username, $password, $dbname);
-
-//     if ($mysqli->connect_error) {
-//         die("Falha na conexão: " . $mysqli->connect_error);
-//     }
-
-//     return $mysqli;
-// }
