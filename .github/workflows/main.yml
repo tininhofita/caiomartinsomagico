@@ -43,5 +43,6 @@ jobs:
             **/.vscode/**
             **/.idea/**
             **/logs/**
-            **/vendor/**
+            **/vendor/composer/**
+            **/vendor/autoload.php
             **/composer.lock
