@@ -103,6 +103,10 @@ class ContatoController
         $mail = new PHPMailer(true);
 
         try {
+            // Log do início do envio
+            error_log("=== INÍCIO DO ENVIO DE EMAIL ===");
+            error_log("Nome: $nome, Email: $email, Assunto: $assunto");
+
             $mail->isSMTP();
             $mail->Host = 'smtp.titan.email';
             $mail->SMTPAuth = true;
@@ -127,9 +131,16 @@ class ContatoController
             <p><strong>Descrição:</strong> $descricao</p>
             ";
 
-            $mail->send();
+            // Log antes do envio
+            error_log("Tentando enviar email...");
+            $result = $mail->send();
+            error_log("Email enviado com sucesso: " . ($result ? 'SIM' : 'NÃO'));
             return true;
         } catch (Exception $e) {
+            // Log detalhado do erro
+            error_log("ERRO AO ENVIAR EMAIL: " . $e->getMessage());
+            error_log("Detalhes do erro: " . $mail->ErrorInfo);
+            error_log("=== FIM DO ERRO DE EMAIL ===");
             return false;
         }
     }
