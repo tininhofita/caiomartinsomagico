@@ -27,9 +27,10 @@ jobs:
           port: 21
           # IMPORTANTE: caminho relativo à raiz FTP do usuário
           server-dir: /
-          timeout: 1200000
-          dangerous-clean-slate: true
+          timeout: 300000
+          dangerous-clean-slate: false
           security: loose
+          dry-run: false
           log-level: verbose
           exclude: |
             **/.git/**
@@ -42,5 +43,5 @@ jobs:
             **/.vscode/**
             **/.idea/**
             **/logs/**
-            **/vendor/composer/**
-            **/vendor/autoload.php
+            **/vendor/**
+            **/composer.lock
