@@ -1,0 +1,59 @@
+@import url(/admin/assets/css/globalAdmin.css);
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.top-bar-logo {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: var(--preto);
+  color: var(--branco);
+  box-shadow: 0px 4px 8px var(--sombra);
+  font-family: var(--fonte);
+  border-bottom: 3px solid var(--vermelho);
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.user-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background: var(--vermelho);
+  color: var(--branco);
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #c92c3e;
+  transform: scale(1.05);
+}

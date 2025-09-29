@@ -1,0 +1,144 @@
+@import url(global.css);
+
+.sobre {
+    border-radius: 25px;
+    padding: 50px;
+    background: url(#), linear-gradient(135deg, #120000 0%, #1b0000 50%, #1e2530 75%, #0a0f15 100%);
+    margin: 20px auto; /* Adiciona uma margem automática nas laterais para centralizar */
+    max-width: 1200px; /* Define uma largura máxima para a seção */
+}
+
+.sobre p {
+    font-size:1.2em;
+    text-align: center;
+}
+
+.momento-chave {
+    margin-bottom: 1rem; /* Aumenta o espaçamento entre as seções de momentos chave */
+}
+
+.texto-momento-chave {
+    flex: 1; /* Faz com que o texto ocupe o espaço restante */
+}
+
+.foto-cartao {
+    max-width: 300px; /* Ajusta a largura máxima da imagem */
+    margin: 0 auto; /* Centraliza na coluna */
+    position: relative;
+}
+
+.foto-carta,
+.foto-verso {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: block; /* Faz com que as imagens ocupem o espaço da div */
+}
+
+/* Estilização específica para a face da frente e verso */
+.foto-carta {
+    transform: rotateY(0deg); /* Frente da carta está de frente */
+    position: relative; /* Garante que a imagem de frente fique visível */
+    z-index: 2;
+}
+
+.foto-verso {
+    transform: rotateY(180deg);
+    position: absolute; /* Posiciona o verso sobre a frente */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Garante que o verso fique atrás da frente */
+}
+
+/* Efeito de girar ao passar o mouse */
+.foto-cartao:hover .foto-carta {
+    transform: rotateY(-180deg); /* Gira a frente da carta */
+}
+
+.foto-cartao:hover .foto-verso {
+    transform: rotateY(0deg); /* Gira o verso para frente */
+}
+
+/* Estilos do encerramento */
+.encerramento {
+    background-color: var(--vermelho_escuro2);
+    color: var(--branco);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.encerramento p {
+    font-size:1.4em;
+}
+
+.encerramento a.btn {
+    background-color: var(--vermelho);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.encerramento a.btn:hover {
+    background-color: var(--vermelho_escuro);
+}
+
+.lista-numeros a {
+    text-decoration: none;
+    color: var(--branco);
+    background-color: var(--fundo_branco_semi_transparente);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex; /* Usa flex para alinhar ícones e texto */
+    align-items: center; /* Centraliza verticalmente */
+    transition: background-color 0.3s ease;
+}
+
+.lista-numeros a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo mais visível ao passar o mouse */
+}
+
+/* Centralizando o ícone e o texto */
+.lista-numeros li {
+    list-style: none; /* Remove os bullets da lista */
+}
+
+.lista-numeros li i {
+    margin-right: 8px; /* Espaço entre ícone e texto */
+}
+
+/* Estilo para os ícones */
+.lista-numeros i {
+    font-size: 1.5em; /* Tamanho do ícone */
+    color: #ff0000; /* Cor do ícone */
+    vertical-align: middle; /* Alinha verticalmente com o texto */
+}
+
+/* Estilização do texto da lista para remover sublinhado em :hover e :focus */
+.lista-numeros a:hover,
+.lista-numeros a:focus {
+    text-decoration: none; /* Remove sublinhado ao passar o mouse e focar */
+}
+
+
+/* Para telas menores que 768px (tablets para baixo) */
+@media (max-width: 767px) {
+
+.sobre p {
+    font-size:1.0em;
+    text-align: center;
+}
+
+.inverso {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.lista-numeros a {
+    font-size: 0.8em; /* Diminui um pouco o tamanho do texto dos itens da lista */
+}
+
+}

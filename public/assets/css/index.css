@@ -1,0 +1,232 @@
+@import url(global.css);
+
+/* Banner */
+
+.carousel-item img {
+    width: 100%; /* Faz com que a imagem sempre ocupe 100% da largura do container */
+    height: auto; /* Deixa a altura se ajustar automaticamente */
+    min-height: 300px; /* Pode ajustar esse valor para o mínimo que você achar adequado para desktop */
+}
+
+/* Sobre */
+
+.sobre-index {
+    border-radius: 25px;
+    padding: 50px;
+    background: var( --gradiente_fundo);
+}
+
+.imagem-sobre-1,
+.imagem-sobre-2 {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.imagem-sobre-1 {
+    transform: rotate(-5deg);
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+}
+
+.imagem-sobre-2 {
+    transform: rotate(5deg);
+    position: relative;
+    margin-top: -50px;
+    border-radius: 20px;
+}
+
+.imagem-sobre-1:hover,
+.imagem-sobre-2:hover {
+    transform: scale(1.05);
+}
+
+.conteudo-sobre {
+    font-size: var(--tam_font_p);
+    margin-left: 5px;
+    text-align: center;
+}
+
+.meu-icone-sobre {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin-top: 15px;
+    position: relative;
+    left: 90%;
+}
+
+/* Efeito de pulso para o logo e ícones das redes sociais */
+.meu-icone-sobre:hover {
+    animation: pulse 0.6s infinite alternate;
+}
+
+/* Animação de pulso */
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Sobre Redes Sociais */
+
+.foto-perfil {
+    border: 4px solid var(--vermelho);
+    border-radius: 20px;
+    transition: transform 0.5s ease; /* Efeito suave de transição */
+    transform: rotate(3deg);
+}
+
+.foto-perfil:hover {
+    transform: scale(1.05); /* Efeito de crescimento ao passar o mouse */
+}
+
+.descricao-numeros {
+    font-size: var(--tam_font_p);
+    color: var(--branco);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.lista-numeros a {
+    text-decoration: none;
+    color: var(--branco);
+    background-color: var(--fundo_branco_semi_transparente);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex; /* Usa flex para alinhar ícones e texto */
+    align-items: center; /* Centraliza verticalmente */
+    transition: background-color 0.3s ease;
+}
+
+.lista-numeros a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo mais visível ao passar o mouse */
+}
+
+/* Centralizando o ícone e o texto */
+.lista-numeros li {
+    list-style: none; /* Remove os bullets da lista */
+}
+
+.lista-numeros li i {
+    margin-right: 8px; /* Espaço entre ícone e texto */
+}
+
+/* Estilo para os ícones */
+.lista-numeros i {
+    font-size: 1.5em; /* Tamanho do ícone */
+    color: #ff0000; /* Cor do ícone */
+    vertical-align: middle; /* Alinha verticalmente com o texto */
+}
+
+/* Estilização do texto da lista para remover sublinhado em :hover e :focus */
+.lista-numeros a:hover,
+.lista-numeros a:focus {
+    text-decoration: none; /* Remove sublinhado ao passar o mouse e focar */
+}
+
+/*Mobile*/
+
+/* Para telas menores que 767px */
+@media (max-width: 767px) {   
+
+    /* Banner*/
+    .carousel-item img {
+        min-height: 200px; /* Ajusta o mínimo para o mobile, pode ser que você queira mais ou menos */
+    }
+
+    /* Mágica*/
+    #magica-cartas {
+        display: none;
+    }
+    
+    /* Sobre */
+    .conteudo-sobre {
+        font-size: 1.0em;
+    }
+
+    .meu-icone-sobre {
+        display: none;
+    }
+
+    /* Ajusta a ordem no mobile para que as fotos apareçam depois do texto e antes do botão */
+    .order-2 {
+        order: 2;
+    }
+    .order-3 {
+        order: 3;
+    }
+
+    .btn-redirecionar {
+        margin-top: 20px; /* Ajusta esse valor para o espaço que você quer */
+        display: block; /* Isso muda o botão para o modo block */
+        width: fit-content; /* Isso faz o botão envolver o texto dentro dele */
+        margin-left: auto; /* Isso junto com margin-right centraliza o botão */
+        margin-right: auto;
+    }
+
+    /* Sobre - Redes Sociais*/
+    .descricao-numeros {
+        font-size: 1.0em;
+    }
+
+    .foto-perfil {
+        max-width: 80%; /* Diminui a largura da imagem */
+        margin: 0 auto; /* Centraliza a imagem */
+    }
+
+    .descricao-numeros {
+        font-size: 0.9em; /* Diminui um pouco o tamanho do texto */
+    }
+
+    .lista-numeros a {
+        font-size: 0.8em; /* Diminui um pouco o tamanho do texto dos itens da lista */
+    }
+
+    /* Adiciona um espaço acima da imagem */
+    .order-3 {
+        margin-top: 20px; /* Ajusta esse valor para o espaço que você quiser */
+    }
+
+    /* Carta girando*/
+    .card-magic {
+        display: none;
+    }
+}
+
+
+/* iPads em retrato */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    /* Coloca aqui os ajustes para iPads em modo retrato, como tamanhos de fonte, visibilidade de componentes, etc. */
+
+    .conteudo-sobre {
+        font-size: 1.2em; /* Aumenta um pouco o tamanho do texto */
+    }
+
+    .foto-perfil {
+        max-width: 90%; /* Aumenta a largura da imagem */
+    }
+}
+
+/* iPads em paisagem */
+@media (min-width: 1024px) and (orientation: landscape) {
+    /* Coloca aqui os ajustes para iPads em modo paisagem */
+
+    .conteudo-sobre {
+        font-size: 1.4em; /* Ajusta o tamanho do texto conforme necessário */
+    }
+
+    .foto-perfil {
+        max-width: 100%; /* Pode aumentar a imagem um pouco mais */
+    }
+}
+
+
+
+

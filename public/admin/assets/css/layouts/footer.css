@@ -1,0 +1,39 @@
+.site-footer {
+  position: fixed;
+  width: 100%;
+  height: 60px; /* Altura do rodapé */
+  bottom: 0;
+  background-color: var(--preto);
+  color: var(--branco);
+  text-align: center;
+  border-top: 3px solid var(--vermelho);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--fonte);
+  flex-direction: column;
+  z-index: 1000;
+  box-sizing: border-box; /* Garante que o tamanho seja bem calculado */
+}
+
+.site-footer .footer-section {
+  margin: 5px 0;
+}
+
+.site-footer .footer-section p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.site-footer .dev-link {
+  color: var(--vermelho);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer .dev-link:hover {
+  color: #ff6060;
+  text-decoration: underline;
+}

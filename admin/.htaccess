@@ -1,0 +1,9 @@
+# Bloquear acesso direto às views e scripts PHP
+<FilesMatch "\.(php|env|ini)$">
+    Require all denied
+</FilesMatch>
+
+# Permitir apenas arquivos específicos (CSS, JS, Imagens)
+<FilesMatch "\.(css|js|png|jpg|jpeg|gif|svg|ico)$">
+    Require all granted
+</FilesMatch>

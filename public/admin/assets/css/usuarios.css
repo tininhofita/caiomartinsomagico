@@ -1,0 +1,105 @@
+@import url("/admin/assets/css/globalAdmin.css");
+
+/* Geral */
+main {
+  padding: 20px;
+  background-color: var(--branco);
+  margin-left: 200px; /* Alinha com o menu lateral */
+  min-height: calc(100vh - 120px); /* Considera altura do header e footer */
+}
+
+/* Título principal */
+.tituloMenu {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--vermelho);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Seção do Formulário */
+.form-section {
+  background: var(--branco);
+  border-radius: 10px;
+  border: 1px solid var(--sombra);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 6px var(--sombra);
+}
+
+.form-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--preto);
+  text-align: center;
+}
+
+.form-add-user {
+  display: grid;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-add-user input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--sombra);
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.form-add-user input:focus {
+  border-color: var(--vermelho);
+  outline: none;
+  box-shadow: 0 0 5px var(--vermelho);
+}
+
+/* Tabela de Usuários */
+.table-section {
+  padding: 20px;
+  background: var(--branco);
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px var(--sombra);
+}
+
+.table-section h2 {
+  font-size: 1.5rem;
+  color: var(--preto);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.tabela_users {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center; /* Centraliza todo o conteúdo das células */
+}
+
+.tabela_users thead {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+.tabela_users th,
+.tabela_users td {
+  padding: 10px;
+  border: 1px solid var(--sombra);
+}
+
+/* Ajustes de estilo para as linhas da tabela */
+.tabela_users tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Coluna de ações */
+.tabela_users td.acao {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os botões */
+  align-items: center; /* Alinha os botões verticalmente */
+  justify-content: center; /* Centraliza os botões horizontalmente */
+}

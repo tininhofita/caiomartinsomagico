@@ -1,0 +1,66 @@
+@import url(/admin/assets/css/globalAdmin.css);
+
+/* Menu lateral */
+.side-menu {
+  position: fixed;
+  top: 60px; /* Alinhado com a altura do cabeçalho */
+  left: 0;
+  width: 200px;
+  bottom: 60px; /* Estende até o inicio do rodapé */
+  background-color: var(--preto);
+  color: var(--branco);
+  border-right: 3px solid var(--vermelho);
+  z-index: 1000;
+  overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder a altura */
+}
+
+.menu-title {
+  font-family: var(--fonte);
+  background-color: var(--vermelho);
+  color: var(--branco);
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0; /* Remove margens para melhor alinhamento */
+}
+
+.menu-list {
+  font-family: var(--fonte);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list > li {
+  padding: 10px 0;
+}
+
+.menu-list > li > a {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre o ícone e o texto */
+  padding: 10px 20px;
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-list > li > a:hover {
+  background-color: var(--vermelho);
+  color: var(--branco);
+  margin: 0 10px; /* Adiciona espaçamento lateral ao hover */
+  border-radius: 8px; /* Mantém os cantos arredondados */
+}
+
+.menu-list > li > a i {
+  font-size: 1.2rem; /* Tamanho dos ícones */
+  color: var(--branco);
+  transition: color 0.3s ease;
+}
+
+.menu-list > li > a:hover i {
+  color: var(--branco); /* Deixa os ícones brancos ao passar o mouse */
+}

@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root {
+  --fonte: "Poppins", sans-serif;
+  --gradiente: linear-gradient(to bottom, #232c33, #203a43, #2c5364);
+  --branco: #f5f5f5;
+  --vermelho: #dd403a;
+  --preto: #232c33;
+  --sombra: rgba(0, 0, 0, 0.15);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: var(--fonte);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* Permite que o conteúdo principal ocupe o espaço disponível */
+  padding: 20px;
+  background-color: var(--branco);
+  margin-left: 200px; /* Alinha com o menu lateral */
+  margin-top: 60px; /* Evita sobreposição do header */
+}
+
+/* Estilo padrão para botões */
+
+/* Botão primario */
+
+.btn-principal {
+  background: var(--vermelho);
+  color: var(--branco);
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.btn-principal:hover {
+  background: #b9302e;
+  transform: scale(1.01);
+}
+
+/* Botão de editar */
+
+/* Botão de Editar */
+.btn-vermelho {
+  background: var(--vermelho);
+  color: var(--branco);
+  padding: 10px; /* Mais espaçamento interno */
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+  transition: all 0.3s ease;
+  flex: 1; /* Faz o botão ocupar espaço proporcional */
+  text-align: center;
+}
+
+.btn-vermelho:hover {
+  background: #b9302e;
+  transform: translateY(-2px) scale(1.03); /* Leve destaque no hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de Remover */
+.btn-preto {
+  background: var(--preto);
+  color: var(--branco);
+  padding: 10px; /* Mais espaçamento interno */
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+  transition: all 0.3s ease;
+  flex: 1; /* Faz o botão ocupar espaço proporcional */
+  text-align: center;
+}
+
+.btn-preto:hover {
+  background: #1a1a1a;
+  transform: translateY(-2px) scale(1.03); /* Leve destaque no hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de foco para todos os botões */
+button:focus {
+  outline: 2px solid var(--vermelho);
+  outline-offset: 2px; /* Cria um espaço entre o botão e o outline */
+  box-shadow: 0 0 10px var(--vermelho); /* Destaque ao focar */
+  transform: scale(1.02); /* Leve aumento ao focar */
+}
+
+/* Ajustes gerais para botões */
+button {
+  display: inline-block; /* Garante consistência em diferentes contextos */
+  text-transform: uppercase; /* Deixa o texto em letras maiúsculas */
+  letter-spacing: 1px; /* Adiciona espaçamento entre letras */
+}

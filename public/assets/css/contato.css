@@ -1,0 +1,47 @@
+@import url(global.css);
+
+#descricao-counter {
+  font-size: 0.85rem;
+  color: white; /* Cor branca para o contador */
+  margin-top: 5px;
+}
+
+.galeria-imagens {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens se ajustem em linhas múltiplas conforme necessário */
+  justify-content: center; /* Centraliza as imagens horizontalmente */
+  gap: 20px; /* Espaçamento entre as imagens */
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.galeria-imagens img {
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  width: calc(
+    33% - 20px
+  ); /* Calcula a largura para que caibam 3 imagens por linha com espaço entre elas */
+  height: auto; /* Mantém a proporção das imagens */
+}
+
+.galeria-imagens img:hover {
+  transform: scale(1.05); /* Aumento discreto ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+}
+
+/* Para telas menores que 768px (tablets para baixo) */
+
+@media (max-width: 768px) {
+  /* Ajustes para telas menores */
+  .galeria-imagens img {
+    width: calc(50% - 20px); /* Duas imagens por linha em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes para telas muito pequenas */
+  .galeria-imagens img {
+    width: 100%; /* Uma imagem por linha em telas muito pequenas */
+  }
+}

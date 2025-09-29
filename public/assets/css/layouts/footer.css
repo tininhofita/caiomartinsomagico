@@ -1,0 +1,91 @@
+@import url(../global.css);
+
+/* Estilo geral do footer */
+.footer-modern {
+  background-color: var(--vermelho_escuro);
+  color: white;
+  text-align: center;
+}
+
+.footer-modern a {
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-modern a:hover {
+  color: red;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+/* Redes sociais */
+.footer-modern .social-link {
+  margin: 0 10px;
+  font-size: 24px;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-modern .social-link:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
+/* E-mail */
+.footer-modern .footer-email {
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.footer-modern .email-link {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-modern .email-link:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+/* Desenvolvedor */
+.footer-modern .dev-link {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-modern .dev-link:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+/* Divisória opcional para espaços */
+.footer-modern hr {
+  margin: 20px 0;
+  border: none;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+  .footer-modern {
+    text-align: center;
+  }
+
+  .footer-modern .social-link {
+    font-size: 20px;
+  }
+
+  .footer-modern .footer-email {
+    font-size: 0.9rem;
+  }
+}

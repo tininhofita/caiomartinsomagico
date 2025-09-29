@@ -1,0 +1,79 @@
+@import url(/admin/css/loginAdmin.css);
+@import url(/admin/css/menuAdmin.css);
+@import url(/admin/css/agendaAdmin.css);
+@import url(/admin/css/contatoAdmin.css);
+@import url(/admin/css/addUser.css);
+@import url(/admin/css/banner.css);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
+
+
+:root {
+    --fonte-principal: "Syne", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+    --gradiente: linear-gradient(to right, #E63946, #1D3557);
+    --corDeFundo: #F1FAEE;
+    --corTexto: #1D1D1D;
+    --azul: #1D3557;
+    --branco:#ffffff;
+    --vermelho: #E63946;
+    --preto: #040404;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--preto); /* Rodapé preto para contraste */
+    color: var(--branco);
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--branco);
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--vermelho);
+    text-decoration: underline;
+}
+
+/* Estilo para o botões */
+
+.bottons_admin button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botton_voltar {
+    background-color: var(--branco);
+    color: var(--azul);
+}
+
+.botton_voltar:hover {
+    background-color: var(--corDeFundo);
+}
+
+
+.botton_sair {
+    background-color: var(--vermelho);
+}
+
+.botton_sair:hover {
+    background-color: #a83232;
+}
+
+.botton_home {
+    background-color: var(--azul);
+}
+
+

@@ -1,0 +1,267 @@
+@import url(/admin/assets/css/globalAdmin.css);
+
+.tituloContatos {
+  font-size: 2rem;
+  color: var(--vermelho);
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Estilos da tabela */
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.contato-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  font-size: 0.9rem; /* Reduz o tamanho da fonte para todas as células */
+}
+
+.contato-table th,
+.contato-table td {
+  padding: 10px;
+  border: 1px solid var(--sombra);
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.contato-table th {
+  background: var(--preto);
+  color: var(--branco);
+  font-weight: bold;
+  font-size: 0.95rem; /* Mantém o cabeçalho ligeiramente maior */
+}
+
+/* Definição de larguras específicas para cada coluna */
+.contato-table th:nth-child(1),
+.contato-table td:nth-child(1) {
+  width: 8%; /* Data */
+}
+
+.contato-table th:nth-child(2),
+.contato-table td:nth-child(2) {
+  width: 8%; /* Nome */
+}
+
+.contato-table th:nth-child(3),
+.contato-table td:nth-child(3) {
+  width: 8%; /* Telefone */
+}
+
+.contato-table th:nth-child(4),
+.contato-table td:nth-child(4) {
+  width: 13%; /* Email */
+}
+
+.contato-table th:nth-child(5),
+.contato-table td:nth-child(5) {
+  width: 8%; /* Assunto */
+}
+
+.contato-table th:nth-child(6),
+.contato-table td:nth-child(6) {
+  width: 40%; /* Descrição */
+}
+
+.contato-table th:nth-child(7),
+.contato-table td:nth-child(7) {
+  width: 10%; /* Ação */
+}
+
+/* Alternância de cores nas linhas */
+.contato-table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Estilo para a descrição */
+.contact-message {
+  width: 100%;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.description-short,
+.description-full {
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+.description-short {
+  white-space: normal; /* Permite quebra de linha */
+  overflow: visible; /* Mostra todo o conteúdo */
+  text-overflow: unset; /* Remove o truncamento */
+}
+
+.description-full {
+  margin-bottom: 10px;
+  white-space: normal;
+}
+
+.description-short.hidden,
+.description-full.hidden {
+  display: none;
+}
+
+.expand-button {
+  margin-top: 8px;
+  align-self: flex-start;
+  background-color: var(--preto);
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: none;
+  color: var(--branco);
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.expand-button:hover {
+  text-decoration: underline;
+  background-color: #1a1a1a;
+  transform: scale(1.05);
+}
+
+.btn-vermelho,
+.btn-preto {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px;
+  font-size: 0.7rem;
+}
+
+/* Botões de foco */
+button:focus {
+  outline: 2px solid var(--vermelho);
+  outline-offset: 2px;
+  box-shadow: 0 0 8px var(--vermelho);
+  transform: scale(1.02);
+}
+
+/* Botões de hover */
+button:hover {
+  text-decoration: none;
+}
+
+/* Ajustes gerais */
+button {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro com opacidade */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: var(--branco);
+  padding: 30px;
+  border-radius: 12px;
+  width: 40%; /* Ajuste de largura */
+  max-width: 600px; /* Largura máxima */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais leve */
+  position: relative;
+  text-align: left;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--preto);
+}
+
+/* Botão de Fechar */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: var(--preto);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: var(--vermelho);
+}
+
+/* Campos do formulário */
+.modal-content label {
+  font-size: 0.9rem;
+  color: var(--preto);
+  margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--sombra);
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  font-family: var(--fonte);
+  color: var(--preto);
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  border-color: var(--vermelho);
+  box-shadow: 0px 0px 4px var(--vermelho);
+  outline: none;
+}
+
+.modal-content textarea {
+  resize: none; /* Evita redimensionamento */
+}
+
+/* Botão de enviar */
+.modal-content .btn-vermelho {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: var(--vermelho);
+  color: var(--branco);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content .btn-vermelho:hover {
+  background: #b9302e;
+  transform: scale(1.02);
+}

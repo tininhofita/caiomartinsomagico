@@ -1,0 +1,160 @@
+@import url(/admin/assets/css/globalAdmin.css);
+
+/* Geral */
+main {
+  padding: 20px;
+  background-color: var(--branco);
+  margin-left: 200px; /* Alinha com o menu lateral */
+  min-height: calc(100vh - 120px); /* Considera altura do header e footer */
+}
+
+/* Título da Página */
+.tituloAgenda {
+  font-size: 2rem;
+  color: var(--vermelho);
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Formulário */
+.form-section {
+  background: var(--branco);
+  border: 1px solid var(--sombra);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 6px var(--sombra);
+}
+
+.form-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--preto);
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 3px;
+  font-size: 0.9rem;
+  color: var(--preto);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--sombra);
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+/* Seção de Eventos */
+.events-section {
+  margin-top: 20px;
+  padding-bottom: 80px;
+}
+
+.events-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--preto);
+  text-align: center;
+}
+
+#events-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Estilos específicos dos cards */
+.event-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espaça os elementos para alinhar os botões */
+  background: var(--branco);
+  border: 1px solid var(--sombra);
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  max-width: 280px;
+  height: auto; /* Deixa o cartão se ajustar automaticamente */
+  box-shadow: 0px 6px 8px var(--sombra);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-item:hover {
+  transform: translateY(-5px);
+}
+
+.event-actions {
+  display: flex;
+  gap: 10px; /* Espaço entre os botões */
+  justify-content: center; /* Centraliza horizontalmente os botões */
+  align-items: center; /* Centraliza verticalmente os botões */
+  margin-top: 10px; /* Espaço acima dos botões */
+}
+
+.event-date,
+.event-city,
+.event-venue,
+.event-link {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.event-date {
+  color: var(--vermelho);
+  font-size: 1.2rem;
+}
+
+.event-city {
+  color: #2c5364;
+}
+
+.event-venue {
+  color: #203a43;
+}
+
+.event-link {
+  font-size: 0.9rem;
+  color: var(--preto);
+  font-weight: bold;
+}
+
+.event-link a {
+  display: inline-block;
+  color: var(--vermelho);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.event-link a:hover {
+  color: #ff6347;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+#events-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.event-item {
+  flex: 1;
+  min-width: 250px;
+  max-width: 280px;
+}

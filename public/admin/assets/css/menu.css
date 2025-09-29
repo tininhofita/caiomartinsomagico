@@ -1,0 +1,53 @@
+@import url(/admin/assets/css/globalAdmin.css);
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stats-card {
+  background: var(--branco);
+  color: var(--preto);
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px var(--sombra);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+}
+
+.stats-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.stats-number {
+  font-size: 2rem;
+  color: var(--vermelho);
+  font-weight: bold;
+}
+
+/* Estilos da tabela do JS */
+
+.event-link a {
+  display: inline-block;
+  max-width: 100%; /* Garante que ele respeite o limite do card */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adiciona "..." no final */
+  white-space: nowrap; /* Não quebra linhas */
+  color: var(--vermelho); /* Personalize a cor do link */
+  text-decoration: none;
+}
+
+.event-link a:hover {
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
