@@ -1,68 +1,5 @@
 @import url(global.css);
 
-/* Banner */
-
-.carousel-item img {
-    width: 100%; /* Faz com que a imagem sempre ocupe 100% da largura do container */
-    height: auto; /* Deixa a altura se ajustar automaticamente */
-    min-height: 300px; /* Pode ajustar esse valor para o mínimo que você achar adequado para desktop */
-}
-
-/* Sobre */
-
-.sobre-index {
-    border-radius: 25px;
-    padding: 50px;
-    background: var( --gradiente_fundo);
-}
-
-.imagem-sobre-1,
-.imagem-sobre-2 {
-    max-width: 100%;
-    height: auto;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.imagem-sobre-1 {
-    transform: rotate(-5deg);
-    position: relative;
-    z-index: 2;
-    border-radius: 20px;
-}
-
-.imagem-sobre-2 {
-    transform: rotate(5deg);
-    position: relative;
-    margin-top: -50px;
-    border-radius: 20px;
-}
-
-.imagem-sobre-1:hover,
-.imagem-sobre-2:hover {
-    transform: scale(1.05);
-}
-
-.conteudo-sobre {
-    font-size: var(--tam_font_p);
-    margin-left: 5px;
-    text-align: center;
-}
-
-.meu-icone-sobre {
-    width: 50px;
-    height: auto;
-    display: block;
-    margin-top: 15px;
-    position: relative;
-    left: 90%;
-}
-
-/* Efeito de pulso para o logo e ícones das redes sociais */
-.meu-icone-sobre:hover {
-    animation: pulse 0.6s infinite alternate;
-}
-
 /* Animação de pulso */
 @keyframes pulse {
   from {
@@ -73,160 +10,461 @@
   }
 }
 
-/* Sobre Redes Sociais */
+.banner {
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    min-height: 30rem;
+    transition: transform 0.3s ease;
 
-.foto-perfil {
-    border: 4px solid var(--vermelho);
-    border-radius: 20px;
-    transition: transform 0.5s ease; /* Efeito suave de transição */
-    transform: rotate(3deg);
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  /* Melhorias no carousel */
+  .carousel-control-prev,
+  .carousel-control-next {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(188, 20, 35, 0.8);
+      transform: translateY(-50%) scale(1.1);
+    }
+  }
+
+  .carousel-indicators button {
+    background-color: var(--vermelho);
+    border-radius: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+
+    &.active {
+      background-color: var(--branco);
+      transform: scale(1.2);
+    }
+  }
 }
 
-.foto-perfil:hover {
-    transform: scale(1.05); /* Efeito de crescimento ao passar o mouse */
+#magica-cartas {
+  padding: 6rem 0;
+  background: var(--gradiente_fundo);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      circle at 50% 50%,
+      rgba(188, 20, 35, 0.1) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+  }
+
+  & .cartas {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+
+    & .carta {
+      position: relative;
+      width: 10rem;
+      height: 14rem;
+      margin: 0.5rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-1rem) scale(1.05);
+        filter: drop-shadow(0 10px 20px rgba(188, 20, 35, 0.3));
+
+        & img {
+          box-shadow: 0 1.5rem 3.5rem rgba(188, 20, 35, 0.4);
+        }
+      }
+
+      & img {
+        border-radius: 1.2rem;
+        box-shadow: 0 0.8rem 2.5rem rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+      }
+    }
+  }
 }
 
-.descricao-numeros {
-    font-size: var(--tam_font_p);
-    color: var(--branco);
-    margin-bottom: 20px;
-    text-align: center;
+.conteudo_home {
+  padding: 8rem 0;
+  background: var(--gradiente_fundo);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      45deg,
+      rgba(188, 20, 35, 0.05) 0%,
+      transparent 50%,
+      rgba(188, 20, 35, 0.05) 100%
+    );
+    pointer-events: none;
+  }
+
+  & .sobre-index {
+    border-radius: 2.5rem;
+    padding: 5rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(1rem);
+    border: 0.1rem solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.4);
+    }
+
+    & .caixa-sobre {
+      & .container-sobre {
+        & .titulo-geral {
+          font-size: 3.12rem;
+        }
+
+        & .conteudo-sobre {
+          font-size: 2.5rem;
+          text-align: center;
+        }
+
+        & .btn-redirecionar {
+          font-size: 1.5rem;
+        }
+      }
+
+      & .imagens-sobre {
+        & .imagem-sobre-1,
+        & .imagem-sobre-2 {
+          max-width: 100%;
+          height: auto;
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+          transition: all 0.4s ease;
+          border-radius: 20px;
+          position: relative;
+        }
+
+        & .imagem-sobre-1 {
+          transform: rotate(-5deg);
+          z-index: 2;
+          filter: brightness(1.1) contrast(1.05);
+
+          &:hover {
+            transform: rotate(-3deg) scale(1.08);
+            filter: brightness(1.2) contrast(1.1);
+            box-shadow: 0 25px 50px rgba(188, 20, 35, 0.3);
+          }
+        }
+
+        & .imagem-sobre-2 {
+          transform: rotate(5deg);
+          position: relative;
+          margin-top: -50px;
+          filter: brightness(1.05) contrast(1.1);
+
+          &:hover {
+            transform: rotate(3deg) scale(1.08);
+            filter: brightness(1.15) contrast(1.15);
+            box-shadow: 0 25px 50px rgba(188, 20, 35, 0.3);
+          }
+        }
+      }
+
+      & .meu-icone-sobre {
+        width: 5rem;
+        height: auto;
+        display: block;
+        margin-top: 1.5rem;
+        position: relative;
+        left: 90%;
+
+        &:hover {
+          animation: pulse 0.6s infinite alternate;
+        }
+      }
+    }
+
+    & .container-redes {
+      & .caixa-redes {
+        & .titulo-secundario {
+          font-size: 3.12rem;
+        }
+
+        & .descricao-numeros {
+          font-size: 2.5rem;
+          color: var(--branco);
+          margin-bottom: 2rem;
+          text-align: center;
+        }
+
+        & .lista-numeros {
+          & li {
+            list-style: none;
+            font-size: 2rem;
+
+            & i {
+              margin-right: 0.8rem;
+              font-size: 1.92rem;
+              color: var(--vermelho);
+              vertical-align: middle;
+              transition: all 0.3s ease;
+              padding: 8px;
+              border-radius: 50%;
+              background: rgba(188, 20, 35, 0.1);
+              min-width: 40px;
+              text-align: center;
+
+              &:hover {
+                color: var(--branco);
+                background: var(--vermelho);
+                transform: scale(1.1) rotate(5deg);
+                box-shadow: 0 5px 15px rgba(188, 20, 35, 0.4);
+              }
+            }
+
+            & a {
+              text-decoration: none;
+              color: var(--branco);
+              background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.1) 0%,
+                rgba(255, 255, 255, 0.05) 100%
+              );
+              border-radius: 12px;
+              padding: 15px 20px;
+              margin: 8px 0;
+              display: flex;
+              align-items: center;
+              transition: all 0.3s ease;
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              backdrop-filter: blur(10px);
+              position: relative;
+              overflow: hidden;
+
+              &:hover {
+                background: linear-gradient(
+                  135deg,
+                  rgba(188, 20, 35, 0.2) 0%,
+                  rgba(188, 20, 35, 0.1) 100%
+                );
+                transform: translateX(10px) scale(1.02);
+                box-shadow: 0 10px 25px rgba(188, 20, 35, 0.3);
+                border-color: rgba(188, 20, 35, 0.3);
+              }
+
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                  90deg,
+                  transparent,
+                  rgba(188, 20, 35, 0.2),
+                  transparent
+                );
+                transition: left 0.5s;
+              }
+            }
+          }
+        }
+
+        & .btn-redirecionar {
+          font-size: 1.5rem;
+        }
+      }
+
+      & .foto-perfil {
+        max-width: 350px;
+        width: 100%;
+        height: auto;
+        border: 0.3rem solid var(--vermelho);
+        border-radius: 1.5rem;
+        transition: all 0.4s ease;
+        transform: rotate(1.5deg);
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+        filter: brightness(1.02) contrast(1.02);
+        object-fit: cover;
+
+        &:hover {
+          transform: rotate(0deg) scale(1.05);
+          box-shadow: 0 2rem 4rem rgba(188, 20, 35, 0.3);
+          filter: brightness(1.05) contrast(1.05);
+          border-color: #ff6b6b;
+        }
+      }
+    }
+  }
 }
 
-.lista-numeros a {
-    text-decoration: none;
-    color: var(--branco);
-    background-color: var(--fundo_branco_semi_transparente);
-    border-radius: 5px;
-    padding: 10px;
-    margin: 5px 0;
-    display: flex; /* Usa flex para alinhar ícones e texto */
-    align-items: center; /* Centraliza verticalmente */
-    transition: background-color 0.3s ease;
+/* Melhorias nas cartas animadas */
+.card-magic {
+  position: relative;
+  width: 10rem;
+  height: 14rem;
+  perspective: 1000px;
+  margin: 4rem auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.lista-numeros a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Fundo mais visível ao passar o mouse */
+.magic-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 2s, opacity 2s;
+  transform-style: preserve-3d;
+  display: block;
+  animation: magicTrick 4s infinite linear;
+  border-radius: 1.2rem;
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(0 0 1rem rgba(188, 20, 35, 0.3));
 }
 
-/* Centralizando o ícone e o texto */
-.lista-numeros li {
-    list-style: none; /* Remove os bullets da lista */
+@keyframes magicTrick {
+  0%,
+  100% {
+    transform: translateX(0) rotateY(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(2rem) rotateY(360deg);
+    opacity: 0;
+  }
 }
 
-.lista-numeros li i {
-    margin-right: 8px; /* Espaço entre ícone e texto */
-}
-
-/* Estilo para os ícones */
-.lista-numeros i {
-    font-size: 1.5em; /* Tamanho do ícone */
-    color: #ff0000; /* Cor do ícone */
-    vertical-align: middle; /* Alinha verticalmente com o texto */
-}
-
-/* Estilização do texto da lista para remover sublinhado em :hover e :focus */
-.lista-numeros a:hover,
-.lista-numeros a:focus {
-    text-decoration: none; /* Remove sublinhado ao passar o mouse e focar */
+.magic-card:hover {
+  animation-play-state: paused;
+  transform: scale(1.1) rotateY(180deg);
+  filter: drop-shadow(0 0 2rem rgba(188, 20, 35, 0.6));
 }
 
 /*Mobile*/
 
 /* Para telas menores que 767px */
-@media (max-width: 767px) {   
+@media (max-width: 767px) {
+  /* Banner*/
+  .carousel-item img {
+    min-height: 200px;
+  }
 
-    /* Banner*/
-    .carousel-item img {
-        min-height: 200px; /* Ajusta o mínimo para o mobile, pode ser que você queira mais ou menos */
-    }
+  /* Mágica*/
+  #magica-cartas {
+    display: none;
+  }
 
-    /* Mágica*/
-    #magica-cartas {
-        display: none;
-    }
-    
-    /* Sobre */
-    .conteudo-sobre {
-        font-size: 1.0em;
-    }
+  /* Sobre */
+  .conteudo-sobre {
+    font-size: 1em;
+  }
 
-    .meu-icone-sobre {
-        display: none;
-    }
+  .meu-icone-sobre {
+    display: none;
+  }
 
-    /* Ajusta a ordem no mobile para que as fotos apareçam depois do texto e antes do botão */
-    .order-2 {
-        order: 2;
-    }
-    .order-3 {
-        order: 3;
-    }
+  .order-2 {
+    order: 2;
+  }
+  .order-3 {
+    order: 3;
+  }
 
-    .btn-redirecionar {
-        margin-top: 20px; /* Ajusta esse valor para o espaço que você quer */
-        display: block; /* Isso muda o botão para o modo block */
-        width: fit-content; /* Isso faz o botão envolver o texto dentro dele */
-        margin-left: auto; /* Isso junto com margin-right centraliza o botão */
-        margin-right: auto;
-    }
+  .btn-redirecionar {
+    margin-top: 20px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    /* Sobre - Redes Sociais*/
-    .descricao-numeros {
-        font-size: 1.0em;
-    }
+  /* Sobre - Redes Sociais*/
+  .descricao-numeros {
+    font-size: 1em;
+  }
 
-    .foto-perfil {
-        max-width: 80%; /* Diminui a largura da imagem */
-        margin: 0 auto; /* Centraliza a imagem */
-    }
+  .foto-perfil {
+    max-width: 280px;
+    width: 100%;
+    transform: rotate(0.5deg);
+    border: 0.25rem solid var(--vermelho);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    margin: 0 auto; /* Centraliza a imagem */
+  }
 
-    .descricao-numeros {
-        font-size: 0.9em; /* Diminui um pouco o tamanho do texto */
-    }
+  .descricao-numeros {
+    font-size: 0.9em; /* Diminui um pouco o tamanho do texto */
+  }
 
-    .lista-numeros a {
-        font-size: 0.8em; /* Diminui um pouco o tamanho do texto dos itens da lista */
-    }
+  .lista-numeros a {
+    font-size: 0.8em; /* Diminui um pouco o tamanho do texto dos itens da lista */
+  }
 
-    /* Adiciona um espaço acima da imagem */
-    .order-3 {
-        margin-top: 20px; /* Ajusta esse valor para o espaço que você quiser */
-    }
+  /* Adiciona um espaço acima da imagem */
+  .order-3 {
+    margin-top: 20px; /* Ajusta esse valor para o espaço que você quiser */
+  }
 
-    /* Carta girando*/
-    .card-magic {
-        display: none;
-    }
+  /* Carta girando*/
+  .card-magic {
+    display: none;
+  }
 }
-
 
 /* iPads em retrato */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    /* Coloca aqui os ajustes para iPads em modo retrato, como tamanhos de fonte, visibilidade de componentes, etc. */
+  /* Coloca aqui os ajustes para iPads em modo retrato, como tamanhos de fonte, visibilidade de componentes, etc. */
 
-    .conteudo-sobre {
-        font-size: 1.2em; /* Aumenta um pouco o tamanho do texto */
-    }
+  .conteudo-sobre {
+    font-size: 1.2em; /* Aumenta um pouco o tamanho do texto */
+  }
 
-    .foto-perfil {
-        max-width: 90%; /* Aumenta a largura da imagem */
-    }
+  .foto-perfil {
+    max-width: 90%; /* Aumenta a largura da imagem */
+  }
 }
 
 /* iPads em paisagem */
 @media (min-width: 1024px) and (orientation: landscape) {
-    /* Coloca aqui os ajustes para iPads em modo paisagem */
+  /* Coloca aqui os ajustes para iPads em modo paisagem */
 
-    .conteudo-sobre {
-        font-size: 1.4em; /* Ajusta o tamanho do texto conforme necessário */
-    }
+  .conteudo-sobre {
+    font-size: 1.4em; /* Ajusta o tamanho do texto conforme necessário */
+  }
 
-    .foto-perfil {
-        max-width: 100%; /* Pode aumentar a imagem um pouco mais */
-    }
+  .foto-perfil {
+    max-width: 100%; /* Pode aumentar a imagem um pouco mais */
+  }
 }
-
-
-
-

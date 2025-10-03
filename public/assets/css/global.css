@@ -1,111 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap");
 
 :root {
-    --fonte-principal: "Syne", sans-serif;
-    --fonte-secundaria: "Montserrat", sans-serif;
-    --tam_font_p: 1.5em;
-    --vermelho: #bc1423;
-    --vermelho_escuro: #380c14;
-    --vermelho_escuro2:rgb(17, 2, 5);
-    --branco:#ffffff;
-    --preto: #040404;
-    --gradiente_vermelho: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgb(252, 29, 0) 50%, rgba(0,0,0,0) 100%);
-    --gradiente_fundo: linear-gradient(135deg, #120000 0%, #1b0000 50%, #1e2530 75%, #0a0f15 100%);
-    --fundo_branco_semi_transparente: rgba(255, 255, 255, 0.1);
+  --fonte-principal: "Syne", sans-serif;
+  --fonte-secundaria: "Montserrat", sans-serif;
+  --tam_font_p: 2rem;
+  --vermelho: #bc1423;
+  --vermelho_escuro: #380c14;
+  --vermelho_escuro2: rgb(17, 2, 5);
+  --branco: #ffffff;
+  --preto: #040404;
+  --gradiente_vermelho: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgb(252, 29, 0) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  --gradiente_fundo: linear-gradient(
+    135deg,
+    #120000 0%,
+    #1b0000 50%,
+    #1e2530 75%,
+    #0a0f15 100%
+  );
+  --fundo_branco_semi_transparente: rgba(255, 255, 255, 0.1);
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
-    font-family: var(--fonte-principal);
-    font-weight: 400;
-    font-size: 16px;
-    color: var(--branco);
-    background-color: var(--vermelho_escuro2);
+  font-family: var(--fonte-principal);
+  font-weight: 400;
+  color: var(--branco);
+  background-color: var(--vermelho_escuro2);
 }
 
 .linha_decorativa {
-    height: 5px;
-    background: var(--gradiente_vermelho);
-    margin-top: 20px;
-    margin-bottom: 20px;
+  height: 0.5rem;
+  background: var(--gradiente_vermelho);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .titulo-geral {
-    font-size: 2.5em;
-    text-transform: uppercase;
-    text-align: center;
-    color: var(--branco);
-    background-color: var(--vermelho);
-    padding: 5px;
-    clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);
-    opacity: 0; /* Inicia com o título transparente */
-    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Efeitos de transição suaves */
-    transform: translateY(-20px); /* Começa um pouco acima da posição final */
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--branco);
+  background-color: var(--vermelho);
+  padding: 0.5rem;
+  clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);
+  opacity: 0;
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+  transform: translateY(-2rem);
 }
 
-/* Adiciona a classe 'mostrar' ao elemento quando quiser que a animação ocorra */
+/* Adiciona a classe 'mostrar' ao ;elemento quando quiser que a animação ocorra */
 .mostrar {
-    opacity: 1; /* Faz o título ficar visível */
-    transform: translateY(0); /* Volta para a posição original */
+  opacity: 1; /* Faz o título ficar visível */
+  transform: translateY(0); /* Volta para a posição original */
 }
 
 .titulo-secundario {
-    font-size: 1.5em;
-    text-transform: uppercase;
-    text-align: center;
-    color: var(--branco);
-    background-color: var(--vermelho);
-    padding: 5px;
-    clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--branco);
+  background-color: var(--vermelho);
+  padding: 0.5rem;
+  clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);
 }
 
 /* Destaques de Textos */
 
 .destaque_texto {
-    text-align: center;
-    background-color: var(--vermelho);
-    padding: 7px;
-    clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);
+  text-align: center;
+  background-color: var(--vermelho);
+  padding: 0.7rem;
+  clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);
 }
 
 /* Links */
 
 .links-externos:link {
-    color: var(--branco);
-    background-color: var(--vermelho);
-    clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);
-    padding: 7px;
-    text-decoration: none;
+  color: var(--branco);
+  background-color: var(--vermelho);
+  clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);
+  padding: 0.7rem;
+  text-decoration: none;
 }
 
 .links-externos:visited {
-    color: var(--branco);
+  color: var(--branco);
 }
 
 .links-externos:hover {
-    color: var(--branco);
-    background-color: var(--vermelho_escuro);
+  color: var(--branco);
+  background-color: var(--vermelho_escuro);
 }
 
 /* Botões */
 
 .btn-redirecionar {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    color: var(--branco);
-    background-color: var(--vermelho);
-    padding: 10px 20px; /* Espaçamento interno */
-    font-weight: bold; /* Texto em negrito */
-    font-size: 1em; /* Tamanho do texto */
-    clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%); /* Forma personalizada */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    transition: color 0.4s, transform 0.5s; /* Animação suave */
-    text-transform: uppercase;
-}
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: var(--branco);
+  background-color: var(--vermelho);
+  padding: 1rem 2rem; /* Espaçamento interno */
+  font-weight: bold; /* Texto em negrito */
+  font-size: 1.5rem;
+  clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%); /* Forma personalizada */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  transition: color 0.4s, transform 0.5s; /* Animação suave */
+  text-transform: uppercase;
 
-.btn-redirecionar::before {
-    content: '';
+  &::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -115,143 +133,129 @@ body {
     z-index: -1;
     transition: transform 0.5s;
     transform: scaleX(0);
-    transform-origin: 0% 50%; /* Inicia a animação da esquerda para a direita */
+    transform-origin: 0% 50%;
     will-change: transform; /* Otimiza a animação */
-}
+  }
 
-.btn-redirecionar:hover, .btn-redirecionar:focus {
+  &:hover,
+  &:focus {
     color: var(--branco);
+  }
 }
 
-.btn-redirecionar:hover::before, .btn-redirecionar:focus::before {
-    transform: scaleX(1); /* Expande o fundo ao passar o mouse */
+.btn-redirecionar:hover::before,
+.btn-redirecionar:focus::before {
+  transform: scaleX(1);
 }
-
 
 /* Mágica das cartas */
 
-
 #magica-cartas {
-    text-align: center; /* Centraliza o texto */
+  text-align: center;
 }
 
 #magica-cartas .cartas {
-    display: flex;
-    justify-content: center; /* Centraliza os itens na horizontal */
-    flex-wrap: wrap;
-    transition: opacity 1.5s ease;
-    padding: 20px;
-    box-sizing: border-box;
-    margin: 0 auto; /* Adiciona margem automática para centralizar */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: opacity 1.5s ease;
+  padding: 2rem;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 #magica-cartas .carta {
-    margin: 10px;
-    cursor: pointer;
-    perspective: 1000px; /* Adiciona perspectiva para a animação de virada */
+  margin: 1rem;
+  cursor: pointer;
+  perspective: 100rem;
 }
 
 #magica-cartas .carta img {
-    width: 100px; /* Ajuste a largura conforme necessário */
-    transition: transform 0.5s ease;
-    position: relative;
-    backface-visibility: hidden; /* Esconde o verso da imagem durante a rotação */
+  width: 10rem;
+  transition: transform 0.5s ease;
+  position: relative;
+  backface-visibility: hidden;
 }
 
 #magica-cartas .carta .verso {
-    transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 #magica-cartas .carta .frente {
-    transform: rotateY(180deg);
-    position: absolute;
-    top: 0;
-    left: 0;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .carta {
-    border-radius: 10px;
+  border-radius: 1rem;
 }
 
 /* Carta girando  */
 
-
 .card-magic {
-    position: relative;
-    width: 100px;  /* Ajuste conforme o tamanho de sua carta */
-    height: 140px; /* Ajuste conforme o tamanho de sua carta */
-    perspective: 1000px;
-    margin: auto;
+  position: relative;
+  width: 10rem;
+  height: 14rem;
+  perspective: 100rem;
+  margin: auto;
 }
 
 .magic-card {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform 2s, opacity 2s;
-    transform-style: preserve-3d;
-    display: block;
-    animation: magicTrick 4s infinite linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 2s, opacity 2s;
+  transform-style: preserve-3d;
+  display: block;
+  animation: magicTrick 4s infinite linear;
 }
 
 @keyframes magicTrick {
-    0%, 100% {
-        transform: translateX(0) rotateY(0deg);
-        opacity: 1;
-    }
-    50% {
-        transform: translateX(20px) rotateY(360deg);
-        opacity: 0;
-    }
+  0%,
+  100% {
+    transform: translateX(0) rotateY(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(20px) rotateY(360deg);
+    opacity: 0;
+  }
 }
 
 /* Sombras e Efeitos de Luz */
 .magic-card {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-    filter: drop-shadow(0 0 6px crimson); /* Adicione uma cor que combine com a carta */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 0 6px crimson);
 }
-
 
 /* Para telas menores que 768px (tablets para baixo) */
 /* Fontes*/
 @media (max-width: 767px) {
-    .titulo-geral {
-        font-size: 1.0em
-    }
+  .titulo-geral {
+    font-size: 1em;
+  }
 
-    .titulo-secundario {
-        font-size: 1.0em;
-    }
+  .titulo-secundario {
+    font-size: 1em;
+  }
 
-    .linha_decorativa {
-        height: 5px;
-        background: var(--gradiente_vermelho);
-    }
+  .linha_decorativa {
+    height: 5px;
+    background: var(--gradiente_vermelho);
+  }
 }
-
 
 /* iPads em retrato */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    /* Coloca aqui os ajustes para iPads em modo retrato, como tamanhos de fonte, visibilidade de componentes, etc. */
+  .titulo-geral {
+    font-size: 1.5em;
+  }
 
-    .titulo-geral {
-        font-size: 1.5em;
-    }
-
-    .destaque_texto {
-        font-size: 1.2em;
-    }
-}
-
-/* iPads em paisagem */
-@media (min-width: 1024px) and (orientation: landscape) {
-    /* Coloca aqui os ajustes para iPads em modo paisagem */
-
-    .titulo-geral {
-        font-size: 1.5em;
-        margin: 10px;
-    }
-
+  .destaque_texto {
+    font-size: 1.2em;
+  }
 }

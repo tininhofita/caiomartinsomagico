@@ -33,6 +33,11 @@ $router->get('/contato', function () {
     include __DIR__ . '/../../public/views/contato.php';
 });
 
+// Página: Videos
+$router->get('/videos', function () {
+    include __DIR__ . '/../../public/views/videos.php';
+});
+
 // ===========================
 // Rotas de Buscar dados - Public
 // ===========================

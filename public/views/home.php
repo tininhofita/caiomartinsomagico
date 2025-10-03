@@ -63,7 +63,7 @@ $banners = $bannerModel->getBannersForHome();
 
 
     <!-- Banner -->
-    <section>
+    <section class="banner">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <?php foreach ($banners as $index => $banner): ?>
@@ -99,8 +99,7 @@ $banners = $bannerModel->getBannersForHome();
     <div class="linha_decorativa"></div>
 
     <!--Magica-->
-
-    <section id="magica-cartas">
+    <section id="magica-cartas" class="magica-cartas">
         <h1 class="titulo-geral">Antes de tudo, memorize uma carta</h1>
         <div class="cartas" id="cartas">
             <div class="carta">
@@ -131,7 +130,7 @@ $banners = $bannerModel->getBannersForHome();
     <!-- SOBRE -->
     <section class="conteudo_home">
         <div class="sobre-index container mt-3" data-aos="fade-up">
-            <div class="row">
+            <div class="row caixa-sobre">
                 <div class="col-md-6 container-sobre order-md-2 order-1">
                     <!-- Texto do lado direito -->
                     <h2 class="titulo-geral mb-3">Caio Martins</h2>
@@ -146,7 +145,7 @@ $banners = $bannerModel->getBannersForHome();
                         Já
                         se apresentou em canais de TV como, SBT, Record, Globo e está na programação do Comedy Central
                         com
-                        seu show e também um dos convidado do programa “A culpa é do Cabral” na emissora, o maior e mais
+                        seu show e também um dos convidado do programa "A culpa é do Cabral" na emissora, o maior e mais
                         conceituado canal de comédia do mundo. E tem o primeiro especial de Stand-up comedy magic
                         gravado no
                         mundo, que você pode conferir em <a href="https://www.youtube.com/@CaioMartinsOmagico"
@@ -157,7 +156,7 @@ $banners = $bannerModel->getBannersForHome();
                     <!-- Botão de redirecionamento -->
                     <a href="/sobre" class="btn btn-redirecionar d-none d-lg-block">Saiba mais</a>
                 </div>
-                <div class="col-md-6 d-flex flex-column justify-content-center order-md-1 order-2">
+                <div class="imagens-sobre col-md-6 d-flex flex-column justify-content-center order-md-1 order-2">
                     <!-- Espaço para as duas fotos -->
                     <img src="<?= BASE_URL ?>assets/imgs/home/caio1.webp" width="1196" height="797"
                         alt="Caio Martins realizando uma mágica com baralho" class="imagem-sobre-1 mb-3">
@@ -177,9 +176,9 @@ $banners = $bannerModel->getBannersForHome();
         <!-- SOBRE - REDES SOCIAIS-->
 
         <div class="sobre-index container mt-3 mb-3" data-aos="fade-up">
-            <div class="row">
+            <div class="row container-redes">
                 <!-- Coluna do texto e números, que incluirá tudo exceto a imagem e o botão -->
-                <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-left">
+                <div class=" caixa-redes col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-left">
                     <!-- Título -->
                     <h2 class="titulo-secundario mb-3">Meus Números nas Redes</h2>
                     <!-- Descrição curta -->
@@ -206,8 +205,8 @@ $banners = $bannerModel->getBannersForHome();
                 </div>
                 <!-- Coluna da imagem -->
                 <div class="col-lg-6 order-md-1 order-2 d-flex justify-content-center">
-                    <img src="<?= BASE_URL ?>assets/imgs/home/caioRedes.webp" width="1010" height="1500" alt="Perfil Digital"
-                        class="img-fluid foto-perfil mb-3">
+                    <img src="<?= BASE_URL ?>assets/imgs/home/caioRedes.webp" alt="Perfil Digital"
+                        class="foto-perfil mb-3">
                 </div>
                 <!-- Botão 'CONTRATE', que aparecerá após a imagem no mobile -->
                 <div class="col-12 d-lg-none text-center order-3">

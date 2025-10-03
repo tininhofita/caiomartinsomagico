@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/agenda.css">
 
     <!-- Preconnect e DNS-Prefetch -->
@@ -48,25 +49,52 @@
     <!--header-->
     <?php include 'layouts/header.php'; ?>
 
-    <!-- AGENDA -->
-    <section class="container agenda-section mt-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-12 text-center">
-                <h1 class="titulo-agenda">AGENDA - CAIO MARTINS</h1>
-                <h2 class="subtitulo-agenda">Descubra onde será minha próxima apresentação e adquira seus ingressos!</h2>
+
+
+    <!-- Seção de Eventos -->
+    <section class="events-section">
+        <div class="container">
+            <div class="events-header" data-aos="fade-up">
+                <h2 class="events-title">Próximos Shows</h2>
+                <p class="events-subtitle">Confira onde será minha próxima apresentação</p>
+            </div>
+
+            <div class="events-grid" id="events-container">
+                <!-- Eventos serão inseridos aqui dinamicamente -->
             </div>
         </div>
+    </section>
 
-        <div class="row mt-4 align-items-center">
-            <!-- Imagem do Caio -->
-            <div class="col-lg-4 d-flex justify-content-center">
-                <img src="<?php echo BASE_URL; ?>assets/imgs/agenda/caio-agenda.webp" alt="Foto do Caio Martins em um banquinho" class="img-agenda">
-            </div>
-
-            <!-- Lista de Eventos -->
-            <div class="col-lg-8">
-                <div class="row row-cols-1 row-cols-md-2 g-4" id="events-container">
-                    <!-- Eventos serão inseridos aqui dinamicamente -->
+    <!-- Seção de Informações -->
+    <section class="info-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="bi bi-calendar-event"></i>
+                        </div>
+                        <h3>Shows Regulares</h3>
+                        <p>Apresentações semanais em casas de show e teatros</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <h3>Nacional e internacional</h3>
+                        <p>Apresentações em todo o Brasil e no exterior</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="bi bi-ticket-perforated"></i>
+                        </div>
+                        <h3>Ingressos</h3>
+                        <p>Compre seus ingressos online com segurança</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -87,6 +115,11 @@
     </script>
     <script src="<?php echo BASE_URL; ?>assets/js/global.js"></script>
     <script src="<?php echo BASE_URL; ?>assets/js/agenda.js"></script>
+    <!--Scripts externos-->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 

@@ -1,144 +1,469 @@
 @import url(global.css);
 
-.sobre {
-    border-radius: 25px;
-    padding: 50px;
-    background: url(#), linear-gradient(135deg, #120000 0%, #1b0000 50%, #1e2530 75%, #0a0f15 100%);
-    margin: 20px auto; /* Adiciona uma margem automática nas laterais para centralizar */
-    max-width: 1200px; /* Define uma largura máxima para a seção */
-}
+/* Hero Section */
+.hero-sobre {
+  position: relative;
+  height: 20rem;
+  min-height: 15rem;
+  background: linear-gradient(
+      135deg,
+      rgba(188, 20, 35, 0.9) 0%,
+      rgba(56, 12, 20, 0.95) 50%,
+      rgba(17, 2, 5, 0.98) 100%
+    ),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="magic-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23magic-pattern)"/></svg>');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
 
-.sobre p {
-    font-size:1.2em;
-    text-align: center;
-}
-
-.momento-chave {
-    margin-bottom: 1rem; /* Aumenta o espaçamento entre as seções de momentos chave */
-}
-
-.texto-momento-chave {
-    flex: 1; /* Faz com que o texto ocupe o espaço restante */
-}
-
-.foto-cartao {
-    max-width: 300px; /* Ajusta a largura máxima da imagem */
-    margin: 0 auto; /* Centraliza na coluna */
-    position: relative;
-}
-
-.foto-carta,
-.foto-verso {
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    display: block; /* Faz com que as imagens ocupem o espaço da div */
-}
-
-/* Estilização específica para a face da frente e verso */
-.foto-carta {
-    transform: rotateY(0deg); /* Frente da carta está de frente */
-    position: relative; /* Garante que a imagem de frente fique visível */
-    z-index: 2;
-}
-
-.foto-verso {
-    transform: rotateY(180deg);
-    position: absolute; /* Posiciona o verso sobre a frente */
+  & .hero-overlay {
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* Garante que o verso fique atrás da frente */
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      circle at center,
+      rgba(188, 20, 35, 0.3) 0%,
+      rgba(17, 2, 5, 0.8) 70%
+    );
+  }
+
+  & .container-hero {
+    display: flex;
+    justify-content: center;
+
+    & .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 80rem;
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+
+      & .hero-title {
+        font-size: 3.32rem;
+        font-weight: 700;
+        color: var(--branco);
+        margin-bottom: 1rem;
+        text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        line-height: 1.2;
+      }
+
+      & .hero-subtitle {
+        font-size: 1.92rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 400;
+        line-height: 1.5;
+        max-width: 60rem;
+        margin: 0 auto;
+      }
+    }
+  }
 }
 
-/* Efeito de girar ao passar o mouse */
-.foto-cartao:hover .foto-carta {
-    transform: rotateY(-180deg); /* Gira a frente da carta */
+/* Seção Sobre */
+.sobre {
+  background: linear-gradient(
+    135deg,
+    rgba(17, 2, 5, 0.95) 0%,
+    rgba(56, 12, 20, 0.8) 100%
+  );
+  position: relative;
+  padding: 6rem 0;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(188,20,35,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23dots)"/></svg>');
+    opacity: 0.3;
+  }
+
+  & .container {
+    & .momento-chave {
+      margin-bottom: 4rem;
+      position: relative;
+      z-index: 2;
+
+      & .col-md-6 {
+        & .titulo-secundario {
+          font-size: 2.3rem;
+          font-weight: 700;
+          color: var(--branco);
+          margin-bottom: 1.5rem;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -0.8rem;
+            left: 0;
+            width: 6rem;
+            height: 0.3rem;
+            background: var(--gradiente_vermelho);
+            border-radius: 0.2rem;
+          }
+        }
+        & p {
+          font-size: 1.92rem;
+          text-align: center;
+          line-height: 1.7;
+          color: rgba(255, 255, 255, 0.9);
+          margin-bottom: 1.5rem;
+        }
+        & .foto-cartao {
+          max-width: 35rem;
+          margin: 0 auto;
+          position: relative;
+          perspective: 100rem;
+          cursor: pointer;
+          transition: all 0.4s ease;
+
+          &:hover {
+            transform: translateY(-1rem);
+
+            & .foto-carta {
+              transform: rotateY(-180deg);
+            }
+
+            & .foto-verso {
+              transform: rotateY(0deg);
+            }
+          }
+
+          & .foto-carta,
+          & .foto-verso {
+            width: 100%;
+            height: auto;
+            transition: transform 0.8s ease;
+            backface-visibility: hidden;
+            border-radius: 1.5rem;
+            display: block;
+            box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.3);
+          }
+
+          & .foto-carta {
+            transform: rotateY(0deg);
+            position: relative;
+            z-index: 2;
+          }
+
+          & .foto-verso {
+            transform: rotateY(180deg);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+          }
+        }
+        & .lista-numeros {
+          list-style: none;
+          padding: 0;
+          margin: 2rem 0;
+
+          & li {
+            margin-bottom: 1rem;
+          }
+
+          & a {
+            text-decoration: none;
+            color: var(--branco);
+            background: linear-gradient(
+              145deg,
+              rgba(255, 255, 255, 0.1),
+              rgba(255, 255, 255, 0.05)
+            );
+            backdrop-filter: blur(1rem);
+            border: 0.1rem solid rgba(255, 255, 255, 0.2);
+            border-radius: 1.2rem;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            font-size: 1.6rem;
+
+            &:hover {
+              background: rgba(255, 255, 255, 0.15);
+              transform: translateY(-0.3rem);
+              box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.3);
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              height: 0.3rem;
+              background: var(--gradiente_vermelho);
+            }
+          }
+
+          & i {
+            font-size: 1.92rem;
+            margin-right: 1rem;
+            color: var(--vermelho);
+            transition: all 0.3s ease;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+
+          & strong {
+            font-weight: 700;
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
 }
 
-.foto-cartao:hover .foto-verso {
-    transform: rotateY(0deg); /* Gira o verso para frente */
+& .encerramento {
+  background: linear-gradient(
+    135deg,
+    rgba(17, 2, 5, 0.95) 0%,
+    rgba(56, 12, 20, 0.8) 100%
+  );
+  padding: 6rem 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(188,20,35,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23dots)"/></svg>');
+    opacity: 0.3;
+  }
+
+  & .container {
+    & .encerramento-content {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 0 2rem;
+
+      & .encerramento-title {
+        font-size: 2.3rem;
+        font-weight: 700;
+        color: var(--branco);
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        background: linear-gradient(
+          45deg,
+          var(--branco),
+          var(--vermelho),
+          var(--branco)
+        );
+        background-size: 200% 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shimmer 3s ease-in-out infinite;
+      }
+
+      & .encerramento-subtitle {
+        font-size: 1.92rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 2.5rem;
+        line-height: 1.6;
+      }
+
+      & .btn-magic {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        background: linear-gradient(45deg, var(--vermelho), #d32f2f);
+        color: var(--branco);
+        padding: 1.2rem 2.5rem;
+        border-radius: 5rem;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 2.3rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 0.8rem 2.5rem rgba(188, 20, 35, 0.4);
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+          transform: translateY(-0.3rem);
+          box-shadow: 0 1.2rem 3.5rem rgba(188, 20, 35, 0.6);
+          color: var(--branco);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent
+          );
+          transition: left 0.5s ease;
+        }
+      }
+    }
+  }
 }
 
-/* Estilos do encerramento */
-.encerramento {
-    background-color: var(--vermelho_escuro2);
-    color: var(--branco);
-    padding: 3rem 0;
-    text-align: center;
+@keyframes shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
-.encerramento p {
-    font-size:1.4em;
-}
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero-sobre {
+    height: 25vh;
+    min-height: 150px;
+  }
 
-.encerramento a.btn {
-    background-color: var(--vermelho);
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
-}
+  .hero-title {
+    font-size: 2rem;
+  }
 
-.encerramento a.btn:hover {
-    background-color: var(--vermelho_escuro);
-}
+  .hero-subtitle {
+    font-size: 1rem;
+  }
 
-.lista-numeros a {
-    text-decoration: none;
-    color: var(--branco);
-    background-color: var(--fundo_branco_semi_transparente);
-    border-radius: 5px;
-    padding: 10px;
-    margin: 5px 0;
-    display: flex; /* Usa flex para alinhar ícones e texto */
-    align-items: center; /* Centraliza verticalmente */
-    transition: background-color 0.3s ease;
-}
+  .sobre {
+    padding: 4rem 0;
+  }
 
-.lista-numeros a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Fundo mais visível ao passar o mouse */
-}
+  .momento-chave {
+    margin-bottom: 3rem;
+  }
 
-/* Centralizando o ícone e o texto */
-.lista-numeros li {
-    list-style: none; /* Remove os bullets da lista */
-}
+  .momento-chave p {
+    font-size: 1rem;
+  }
 
-.lista-numeros li i {
-    margin-right: 8px; /* Espaço entre ícone e texto */
-}
+  .titulo-secundario {
+    font-size: 1.5rem;
+  }
 
-/* Estilo para os ícones */
-.lista-numeros i {
-    font-size: 1.5em; /* Tamanho do ícone */
-    color: #ff0000; /* Cor do ícone */
-    vertical-align: middle; /* Alinha verticalmente com o texto */
-}
+  .foto-cartao {
+    max-width: 280px;
+    margin-bottom: 2rem;
+  }
 
-/* Estilização do texto da lista para remover sublinhado em :hover e :focus */
-.lista-numeros a:hover,
-.lista-numeros a:focus {
-    text-decoration: none; /* Remove sublinhado ao passar o mouse e focar */
-}
-
-
-/* Para telas menores que 768px (tablets para baixo) */
-@media (max-width: 767px) {
-
-.sobre p {
-    font-size:1.0em;
-    text-align: center;
-}
-
-.inverso {
+  .inverso {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .lista-numeros a {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .lista-numeros i {
+    font-size: 1.5rem;
+    margin-right: 0.8rem;
+  }
+
+  .encerramento {
+    padding: 4rem 0;
+  }
+
+  .encerramento-title {
+    font-size: 2rem;
+  }
+
+  .encerramento-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .btn-magic {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
 }
 
-.lista-numeros a {
-    font-size: 0.8em; /* Diminui um pouco o tamanho do texto dos itens da lista */
-}
+@media (max-width: 480px) {
+  .hero-sobre {
+    height: 20vh;
+    min-height: 120px;
+  }
 
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .sobre {
+    padding: 3rem 0;
+  }
+
+  .momento-chave {
+    margin-bottom: 2.5rem;
+  }
+
+  .foto-cartao {
+    max-width: 250px;
+  }
+
+  .lista-numeros a {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .lista-numeros i {
+    font-size: 1.3rem;
+    margin-right: 0.6rem;
+  }
+
+  .encerramento-title {
+    font-size: 1.8rem;
+  }
+
+  .encerramento-subtitle {
+    font-size: 1rem;
+  }
+
+  .btn-magic {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }

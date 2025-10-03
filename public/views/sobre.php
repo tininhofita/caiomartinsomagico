@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/sobre.css">
 
     <!-- Preconnect e DNS-Prefetch -->
@@ -47,10 +48,20 @@
     <!--header-->
     <?php include 'layouts/header.php'; ?>
 
+    <!-- Hero Section -->
+    <section class="hero-sobre">
+        <div class="hero-overlay"></div>
+        <div class="container-hero">
+            <div class="hero-content">
+                <h1 class="hero-title" data-aos="fade-up">A Trajetória de Caio Martins</h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Conheça os 10 capítulos que transformaram Caio Martins em um dos mágicos e comediantes mais inovadores do Brasil.</p>
+            </div>
+        </div>
+    </section>
+
     <!--SEÇÃO SOBRE-->
     <section class="sobre">
-        <div class="container py-1">
-            <h1 class="text-center titulo-geral mb-5">A Trajetória de Caio Martins</h1>
+        <div class="container py-5">
             <!--Momento-chave 1-->
             <div class="row align-items-center momento-chave" data-aos="fade-up">
                 <div class="col-md-6">
@@ -252,11 +263,17 @@
 
     <div class="linha_decorativa"></div>
 
-    <section class="encerramento text-center py-5">
+    <!-- Seção de Encerramento -->
+    <section class="encerramento">
         <div class="container">
-            <h2 class="titulo-geral mb-4">Quer mais risadas e mágicas na sua vida?</h2>
-            <p>Contrate nosso show que garantimos uma experiência inesquecível!</p>
-            <a href="/contato" class="btn btn-redirecionar">Contrate Agora</a>
+            <div class="encerramento-content" data-aos="fade-up">
+                <h2 class="encerramento-title">Quer mais risadas e mágicas na sua vida?</h2>
+                <p class="encerramento-subtitle">Contrate nosso show que garantimos uma experiência inesquecível!</p>
+                <a href="/contato" class="btn btn-magic">
+                    <i class="bi bi-magic"></i>
+                    Contrate Agora
+                </a>
+            </div>
         </div>
     </section>
 
