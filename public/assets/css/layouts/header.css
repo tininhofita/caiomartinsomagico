@@ -52,7 +52,6 @@
       width: 4.5rem;
       height: 4.5rem;
       border-radius: 50%;
-      border: 0.2rem solid var(--vermelho);
       transition: all 0.3s ease;
       object-fit: cover;
 
