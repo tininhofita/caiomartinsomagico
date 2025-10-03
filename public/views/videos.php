@@ -87,16 +87,13 @@
             <!-- Vídeo 2 -->
             <div class="video-container" data-aos="fade-up">
                 <div class="video-content">
-                    <h2 class="video-title">Fundo Falso - Com Patrick Maia</h2>
+                    <h2 class="video-title">ODEIO MÁGICA COM POMBO</h2>
                     <p class="video-description">
-                        Um video com Patrick Maia
+                        Sempre achei que dava pra xavecar fazendo mágica... um engano que cometi.
                     </p>
                 </div>
                 <div class="video-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RFxneUuBoMM?si=S9yb8OGXenCIxoto"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zasNEWtJQMA?si=hX3hLl42SRjytlta" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -105,16 +102,13 @@
             <!-- Vídeo 3 -->
             <div class="video-container" data-aos="fade-up">
                 <div class="video-content">
-                    <h2 class="video-title">Milagre da Coca-Cola</h2>
+                    <h2 class="video-title">NÃO LEVEM CRIANÇAS</h2>
                     <p class="video-description">
-                        Mágica que da pra fazer em bar, com uma lata de coca-cola emprestada.
+                        Eu não faço mágica pra criança, mas sempre aparece uma no show.
                     </p>
                 </div>
                 <div class="video-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jB8O0-klHD4?si=T-eu6DnBDm5Qm1u0"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wLw1g_9HJ4c?si=SL2nK3rK6i21_7l2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -123,16 +117,13 @@
             <!-- Vídeo 4 -->
             <div class="video-container" data-aos="fade-up">
                 <div class="video-content">
-                    <h2 class="video-title">Participação nos 4 Amigos</h2>
+                    <h2 class="video-title">ROUBANDO UM POLICIAL</h2>
                     <p class="video-description">
-                        Participação nos 4 Amigos com o texto "Esposa grossa"
+                        Tive a sorte ou o azar de chamar um Policial no Palco.
                     </p>
                 </div>
                 <div class="video-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7IH19UvvukA?si=uhNmQXnK-T9URgW4"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9MyPW2dh8fo?si=_sWwdsLQvNs8LfS9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -141,16 +132,13 @@
             <!-- Vídeo 5 -->
             <div class="video-container" data-aos="fade-up">
                 <div class="video-content">
-                    <h2 class="video-title">DUBLADORA FEZ A MELHOR PIADA</h2>
+                    <h2 class="video-title">DESAPARECIMENTO DA "BANANA AMARELA"?!</h2>
                     <p class="video-description">
-                        Chamei uma Dubladora para fazer mágica e ela fez a melhor piada do show.
+                        Comprei uma mágica na internet e fui testar, acho que veio errada!
                     </p>
                 </div>
                 <div class="video-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9YFFVs5qvcU?si=K4-pUPbdHAcgHxTS"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4vxyR71WbBg?si=eU2IBdDsp8zmvtsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
